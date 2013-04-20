@@ -1,6 +1,7 @@
 /* Written by Giri
- * A program to start a VM */
+ * A program to stop a VM */
 #include "header.h"
+/* STATUS: COMPLETE */
 
 static virConnectPtr conn = NULL; /* the hypervisor connection */
 
@@ -51,9 +52,12 @@ int main() {
 	if (conn == NULL) {
 		fprintf (stderr, "Failed to connect to hypervisor\n");
 		goto error;
+	} else {
+		inactive_domains(conn);
+		active_domains(conn);
 	}
 	
-	printf ("Enter the ID of the domain: ");
+	printf ("\nEnter the ID of the domain: ");
 	scanf ("%du", &id);
 
 	if (id == 0) {

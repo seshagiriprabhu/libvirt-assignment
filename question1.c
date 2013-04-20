@@ -2,9 +2,9 @@
  * A program to find the information of a domain */
 #include <stdio.h>
 #include <libvirt/libvirt.h>
+/* STATUS : COMPLETE */
 
-static void
-getDomainInfo(int id) {
+static void getDomainInfo(int id) {
 	virConnectPtr conn = NULL; /* the hypervisor connection */
 	virDomainPtr dom = NULL;   /* the domain being checked */
 	virDomainInfo info;        /* the information being fetched */
@@ -44,6 +44,7 @@ int main() {
 	unsigned int id;
 	printf ("Enter the id of the domain: ");
 	scanf ("%du", &id);
+	
 	getDomainInfo(id);
 
 	return(0);

@@ -2,6 +2,7 @@
  * A program to suspend a VM */
 
 #include "header.h"
+/* STATUS : COMPLETE */
 
 static virConnectPtr conn = NULL; /* the hypervisor connection */
 
@@ -64,9 +65,12 @@ int main () {
 	if (conn == NULL) {
 		fprintf(stderr, "Failed to connect to hypervisor\n");
 		goto error;
+	} else {
+		inactive_domains(conn);
+		active_domains(conn);
 	}
 
-	printf ("Enter the domain ID: ");
+	printf ("\nEnter the domain ID: ");
 	scanf ("%du", &id);
 			
 	if (id == 0) {
