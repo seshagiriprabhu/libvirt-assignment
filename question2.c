@@ -60,7 +60,7 @@ int main () {
 	unsigned int id = 0;
 
 	/* NULL means connect to local Xen hypervisor */
-	conn = virConnectOpenReadOnly(NULL);
+	conn = virConnectOpen(NULL);
 	if (conn == NULL) {
 		fprintf(stderr, "Failed to connect to hypervisor\n");
 		goto error;
