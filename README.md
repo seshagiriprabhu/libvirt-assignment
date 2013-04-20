@@ -9,7 +9,7 @@ Pre-requsite
 
 These are the files in this repository
 ======================================
--[x] question1.c: A program to get the information about the domains which are running.
--[x] question2.c: A program to suspend and resume a VM.
--[x] question3.c: A program to stop a VM.
--[ ] question4.c: A program to start a VM.
+* question1.c: A program to get the information about the domains which are running.
+* question2.c: A program to suspend and resume a VM.
+* question3.c: A program to stop a VM.
+* question4.c: A program to start a VM.
